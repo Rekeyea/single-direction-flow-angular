@@ -1,0 +1,28 @@
+<div class="chat-view">
+    <div class="content">
+        <div class="threads-content">
+            <ul class="threads-overview" *ngIf="threadsInfo$ | async as threadInfo">
+                <li class="thread" (click)="setSelected(thread.threadId)" *ngFor="let thread of threadInfo.threads; let i = index;" [ngClass]="{'selected': thread.threadId === threadInfo.threadId}">
+                    <span class="initials">{{thread.initials}}</span>
+                    <h1 class="thread-name">{{thread.name}}</h1>
+                    <span class="thread-unreads" *ngIf="thread.unreadMessages.length">
+                        <span class="unread-number">{{thread.unreadMessages.length}}</span>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="messages-content">
+            <ul class="messages">
+                <li class="message" *ngFor="let message of messages$ | async; let i = index;" [ngClass]="{'dark': i % 2 == 1}">
+                    <span class="initials">{{message.initials}}</span>
+                    <p class="text">{{message.text}}</p>
+                    <span class="time">{{message.timestamp | date:"short"}}</span>
+                </li>
+            </ul>
+            <div class="send-box">
+                <input type="text" class="message" [(ngModel)]="text"/>
+                <button class="send" (click)="send()"><fa-icon [icon]="paperPlane"></fa-icon></button>
+            </div>
+        </div>
+    </div>
+</div>

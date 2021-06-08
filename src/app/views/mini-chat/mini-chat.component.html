@@ -1,0 +1,15 @@
+<div class="mini-chat" [ngClass]="{'visible': visible}">
+    <div class="header" (click)="openClose()">December Labs</div>
+    <ul class="messages" *ngIf="visible">
+        <li class="message" *ngFor="let message of messages$ | async; let i = index;" [ngClass]="{'dark': i % 2 === 1}">
+            <span class="initials">{{message.initials}}</span>
+            <p class="text">{{message.text}}</p>
+        </li>
+    </ul>
+    <div class="send-box" *ngIf="visible">
+        <input type="text" class="message" [(ngModel)]="text"/>
+        <button class="send" (click)="send()">
+            <fa-icon [icon]="paperPlane"></fa-icon>
+        </button>
+    </div>
+</div>

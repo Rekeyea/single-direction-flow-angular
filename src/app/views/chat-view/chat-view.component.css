@@ -1,0 +1,23 @@
+.chat-view { padding-top: 80px; height: 100vh; width: 100%; background-color: rgba(87,160,211,0.3);}
+.chat-view .content { width: 1080px; height: 100%; box-shadow: 0px 0px 10px #000;  background-color: white;}
+
+.chat-view .content .threads-content { padding-top: 12px; width: 400px; border-right: 1px solid black; height: 100%; float: left; background-color: #003366; }
+.chat-view .content .threads-content .threads-overview .thread { padding: 8px; height: 80px; width: 100%; position: relative;}
+.chat-view .content .threads-content .threads-overview .thread.selected { background-color: #1b5583;}
+.chat-view .content .threads-content .threads-overview .thread:hover { background-color: #104376; transition: all 0.6s;}
+.chat-view .content .threads-content .threads-overview .thread .initials {position: absolute;height: 60px;width: 60px;background-color: #99badd;color: black;line-height: 60px;text-align: center;border-radius: 50%;font-size: 24px;font-weight: bold;} 
+.chat-view .content .threads-content .threads-overview .thread .thread-name {line-height: 62px;font-weight: bold;font-family: monospace; color: white;padding-left: 70px;font-size: 18px;}
+.chat-view .content .threads-content .threads-overview .thread .thread-unreads {position: absolute;bottom: 25px;right: 12px;background-color: white;height: 28px;width: 28px;text-align: center;border-radius: 50%;line-height: 28px; font-weight: bold; color: black;}
+
+.chat-view .content .messages-content { width: 680px; height: 100%; float: right; position: relative;}
+.chat-view .content .messages-content .messages {overflow-y: auto; height: calc(100% - 64px); padding: 8px;}
+.chat-view .content .messages-content .messages .message {position: relative;min-height: 80px;padding: 8px;box-shadow: 0 0 10px rgb(0 0 0 / 50%);border-radius: 5px; margin-top: 12px; }
+.chat-view .content .messages-content .messages .message.dark { background-color: #F0F8FF }
+.chat-view .content .messages-content .messages .message .initials { display: block;height: 60px;width: 60px;float: left;position: relative;top: 2px;line-height: 60px;text-align: center;background-color: darkslateblue;color: white;border-radius: 50%; }
+.chat-view .content .messages-content .messages .message .text { padding-left: 70px;min-height: 52px;font-size: 18px;padding-top: 24px; }
+.chat-view .content .messages-content .messages .message .time { font-size: 10px;display: block;width: 100%;text-align: right;height: 12px;line-height: 12px; }
+
+.chat-view .content .messages-content .send-box {position: absolute;left: 0px;bottom: 0px;height: 60px;width: 100%;padding: 8px;}
+.chat-view .content .messages-content .send-box .message {height: 100%;width: calc(100% - 60px);float: left;}
+.chat-view .content .messages-content .send-box .send {height: 44px;float: right;width: 44px;background-color: transparent;color: #4682b4;}
+.chat-view .content .messages-content .send-box .send:hover { background-color: #104376; transition: all 0.6s; color: white}

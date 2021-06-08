@@ -1,0 +1,7 @@
+.application-header { position: fixed; top: 0px; height: 80px; width: 100%; background-color: #002147; box-shadow: 0px 0px 10px #000; }
+.application-header .content { margin: auto; width: 1080px; }
+.application-header .content .notifications { float: right; display: inline; height: 80px; font-size: 48px; line-height: 80px; position: relative;}
+.application-header .content .notifications .notification-icon { color: #4682b4; }
+.application-header .content .notifications .unread-circle { position: absolute; right: 0px; bottom: 12px; height: 20px;width: 20px;background-color: white;border-radius: 50%; }
+.application-header .content .notifications .unread-circle .unread {position: absolute;height: 20px;width: 20px;font-size: 16px;bottom: 30px;left: 6px;font-weight: bold;}
+.application-header .content .error {position: absolute;left: 0px;width: 100%;background-color: red;text-align: center;}
